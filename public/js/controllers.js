@@ -9,7 +9,7 @@ angular.module('addressBookApp.controllers', [])
             $scope.accountId = SessionService.getUserSession()._id;
         }
 /* We need to watch SessionService and update accountId once SessionService has _id.*/
-        
+
         $scope.isActive = function(viewLocation) {
             if (typeof viewLocation == "object") {
                 var active = false;
