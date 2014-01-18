@@ -132,13 +132,13 @@ angular.module('addressBookApp', [
             });
 
         $locationProvider.html5Mode(true);
-        RestangularProvider.setBaseUrl('http://localhost:3000');
+        RestangularProvider.setBaseUrl('http://floating-lowlands-6528.herokuapp.com/');
     }])
     .run(['$rootScope', '$location', 'SessionService', function ($rootScope, $location, SessionService) {
         $rootScope.$on("$routeChangeStart", function (event, next, current) {
             if (!SessionService.isUserLoggedIn()) {
                 if (next.originalPath != '/register') {
-                    $location.path('/');
+                    $location.path('/');s
                 }
             } else {
                 // No reason to go to the login page if they are already logged in
