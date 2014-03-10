@@ -132,7 +132,7 @@ angular.module('addressBookApp', [
             });
 
         $locationProvider.html5Mode(true);
-        RestangularProvider.setBaseUrl('http://floating-lowlands-6528.herokuapp.com/');
+        RestangularProvider.setBaseUrl('http://localhost:3000/');
     }])
     .run(['$rootScope', '$location', 'SessionService', function ($rootScope, $location, SessionService) {
         $rootScope.$on("$routeChangeStart", function (event, next, current) {
